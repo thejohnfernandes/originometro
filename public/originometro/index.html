@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Originómetro</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="iamge/favicon.ico">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="card" >
+            <div class="card-title">Quão alexandrinos somos?</div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card" style="width: 100%;">
+                     
+                        <div class="card-body">
+                            <h1>Contra Celso</h1>
+                                <p>
+                                    Celso, um filósofo do século II, era um pluralista religioso e um crítico do cristianismo primitivo. Ele defendia a tradição filosófica grega e o politeísmo romano, criticando a crença cristã em um único Deus e a ideia da encarnação divina como incompatíveis com a razão filosófica. Celso argumentava que as crenças tradicionais pagãs eram superiores por serem mais antigas e mais alinhadas com a natureza humana e o universo. Suas críticas foram amplamente direcionadas à nascente comunidade cristã, buscando refutar suas doutrinas com argumentos racionais e morais.
+                                </p>
+                                <p>
+                                    "Nem um deus, ó judeus e cristãos, nem um filho de Deus jamais desceu ou pode descer ao mundo. Mas se vocês falam de não sei quais anjos, a quem vocês chamam assim, deuses ou algum outro tipo de seres? A outro tipo de seres, ao que parece, aos demônios". — Celso
+                                </p>
+                      
+                        </div>    
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card" style="width: 100%;"></div>
+                     
+                        <div class="card-body">
+                            <h1>Originômetro - Média da Sala</h1>
+                            <div id="container-gauge" class="c-gauge" style="display: flex; justify-content: center; align-items: center;" ></div>
+                      
+                        </div>    
+                    </div>
+                    
+
+                </div>   
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div id="refutacoes-container" class="row">
+            <!-- Os cards serão inseridos aqui -->
+        </div>
+    </div>
+    
+    
+
+  
+    <script src="/js/originometro.js"></script>
+   
+</body>
+</html>
+
+
+<style>
+
+.card-img-top {
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        height: 200px; /* Altura fixa para o div */
+        background-color: #F0F0F0; /* Cor de fundo, se necessário */
+        border-radius: 10px;
+    }
+
+    /* Se a imagem dentro do div precisar ser centralizada */
+    .card-img-top img {
+        max-width: 100%; /* Limita a largura da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+.list-group-item {
+        background-color: #F9F9F9; /* Fundo claro */
+        border: none; /* Remover as bordas padrão */
+        padding: 15px 20px; /* Espaçamento confortável */
+        font-size: 16px; /* Tamanho de texto agradável */
+        color: #14171A; /* Cor do texto */
+        border-bottom: 1px solid #E1E8ED; /* Linha inferior clara */
+    }
+
+    .list-group-item:last-child {
+        border-bottom: none; /* Remove a borda inferior do último item */
+    }
+
+    .list-group-item b {
+        color: #1DA1F2; /* Destaca o texto em azul, estilo Twitter */
+        font-weight: bold; /* Negrito para o título da análise */
+    }
+
+    .list-group-item:hover {
+        background-color: #F1F1F1; /* Fundo mais escuro ao passar o mouse */
+    }body, html {
+        height: 100%;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #15202B; /* Fundo escuro */
+        color: #E1E8ED; /* Texto claro */
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    .card {
+        background-color: #192734; /* Fundo do card similar ao Twitter escuro */
+        border: none;
+        border-radius: 10px;
+        color: #E1E8ED;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    }
+
+    .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #E1E8ED;
+        padding: 10px;
+        border-bottom: 1px solid #253341;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card h1 {
+        color: #FFFFFF;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        color: #8899A6; /* Cinza claro para o texto */
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .gauge {
+        width: 100%;
+        height: 300px;
+        background-color: #1B2836;
+        border-radius: 10px;
+    }
+
+    /* Estilos para o botão e elementos interativos */
+    .btn-primary {
+        background-color: #1DA1F2; /* Azul do Twitter */
+        border-color: #1DA1F2;
+        color: #fff;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #1991DA;
+        border-color: #1991DA;
+    }
+
+    /* Link customizado */
+    a {
+        color: #1DA1F2;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .gauge {
+            height: 200px;
+        }
+    }
+</style>

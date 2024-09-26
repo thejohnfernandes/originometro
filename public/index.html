@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contra Celso</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #15202b; /* Fundo escuro do Twitter */
+      color: #e1e8ed; /* Texto claro */
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .container {
+      background-color: #192734; /* Fundo escuro para o container */
+      border: 1px solid #38444d; /* Borda sutil no modo escuro */
+      border-radius: 8px; /* Bordas arredondadas */
+      padding: 20px; /* Espaçamento interno */
+      margin-top: 20px; /* Margem superior */
+    }
+
+    h1 {
+      color: #1da1f2; /* Azul do Twitter para o título */
+    }
+
+    .btn-primary {
+      background-color: #1da1f2; /* Botão azul do Twitter */
+      border: none;
+      color: #fff; /* Texto branco */
+    }
+
+    .btn-primary:hover {
+      background-color: #1991db; /* Azul mais escuro quando passar o mouse */
+    }
+
+    #thankYouMessage {
+      display: none; /* Esconde a mensagem de agradecimento */
+      color: #e1e8ed; /* Cor clara para a mensagem */
+    }
+</style>
+<link rel="icon" type="image/x-icon" href="iamge/favicon.ico">
+
+</head>
+<body>
+  <div class="container">
+    <div id="loading" class="form-group" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <img src="/images/loading.gif" alt="Carregando..."> <!-- Ícone de carregamento -->
+    </div>
+  
+
+    <div id="formContraCelso">
+        <h1>Contra Celso</h1>
+        <p>Celso, um filósofo do século II, era um pluralista religioso e um crítico do cristianismo primitivo. Ele defendia a tradição filosófica grega e o politeísmo romano, criticando a crença cristã em um único Deus e a ideia da encarnação divina como incompatíveis com a razão filosófica. Celso argumentava que as crenças tradicionais pagãs eram superiores por serem mais antigas e mais alinhadas com a natureza humana e o universo. Suas críticas foram amplamente direcionadas à nascente comunidade cristã, buscando refutar suas doutrinas com argumentos racionais e morais.
+        </p>
+        <div class="container">
+          <p>"Nem um deus, ó judeus e cristãos, nem um filho de Deus jamais desceu ou pode descer ao mundo. Mas se vocês falam de não sei quais anjos, a quem vocês chamam assim, deuses ou algum outro tipo de seres? A outro tipo de seres, ao que parece, aos demônios". Celso</p>
+          <form id="responseForm">
+            <div class="form-group">
+              <label for="question">Seja você também mais um contra Celso!</label>
+              <textarea class="form-control" id="question" rows="3" placeholder="Digite sua resposta aqui..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Resposta para Celso</button>
+          </form>   
+        </div>
+    </div>
+    <div id="thankYouMessage">
+  </div>
+ 
+</div>
+  
+
+    <script src="/js/formHandler.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
